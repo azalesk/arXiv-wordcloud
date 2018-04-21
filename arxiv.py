@@ -33,11 +33,8 @@ def index():
     response = urlreq.urlopen(query).read()
     feed = feedparser.parse(response)
 
-    text = ""
-
-    for entry in feed.entries:
-        text = text + " " + entry.summary
-
+    text = " ".join(entry.summary for entry in feed.entries)
+    
     if text == "":
         return render_template("index.html")
     
