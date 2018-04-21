@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>ArXiv word cloud generator</title>
+  <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='styles/sty.css') }}" />
+</head>
+<body>
+<br><br>
+{% if PLOTSTR %}
+<h1 class="center smallcaps">Word cloud for {{ name }}</h1>
+<img src="data:image/png;base64,{{ PLOTSTR | safe }}" width="800" class="centerim">
+{% else %}
+<h1 class="center">
+Enter a valid arXiv author. Examples: <br>
+<a href="http://sites.math.rutgers.edu/~az202/">Anthony Zaleski</a> <br>
+Doron Zeilberger <br>
+Stephen Hawking <br>
+Donald Knuth <br>
+Edward Witten <br>
+N. Tyson <br>
+Andrew Wiles
+<br><br>
+</h1>
+{% endif %}
+<h2 class="center">
+<form action="/" method="get">
+    <div>
+        <label for="name">First name or initial:</label>
+        <input type="text" name="first" class="textbox">
+    </div>
+    <div>
+        <label for="name">Last name:</label>
+        <input type="text" name="last" class="textbox">
+    </div>
+   <br>
+    <div>
+     <button type="submit" class="button1">Compute word cloud (takes a moment)</button>
+   </div>
+</form>
+</h2>
+<br>
+<p class="center">
+    Created by <a href="http://sites.math.rutgers.edu/~az202/">Anthony Zaleski</a> using
+    the <a href="https://arxiv.org/help/api/index">arXiv API</a>,
+    <a href="https://pypi.python.org/pypi/wordcloud"> wordcloud by Andreas Mueller</a>,
+    <a href="http://flask.pocoo.org/">Flask</a>, and
+    <a href="https://www.pythonanywhere.com/">Python Anywhere</a>.
+</p>
+<br><br>
+</body>
+</html>

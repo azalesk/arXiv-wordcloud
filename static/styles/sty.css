@@ -1,0 +1,105 @@
+h1,h2 {
+  font-family: Futura, "Century Gothic", "Franklin Gothic Medium", "Helvetica Neue", "Trebuchet MS", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+
+  font-size:20pt;
+}
+
+h2 {
+  font-size: 14pt;
+
+}
+
+
+
+
+p, pre,blockquote,ul {
+  font-family: "Century Schoolbook", Century, "Times New Roman", Times, serif ;
+  color: #000000;
+  font-size: 14pt;
+}
+
+.center {
+    text-align: center;
+
+}
+
+IMG.centerim {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+.indent1 {
+     margin-left: 50px;
+
+}
+
+.indent2 {
+     margin-left: 100px;
+
+}
+
+.indent3 {
+     margin-left: 150px;
+
+}
+
+.spacedletters {
+  letter-spacing: 4px;
+}
+
+
+a:link {
+  color: #404040  ;
+  text-decoration: none;
+}
+
+
+a:visited {
+  color: #404040  ;
+  text-decoration: none;
+}
+
+
+.spacedlines {
+    line-height: 200%;
+}
+
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+.button1 {
+  background-color: #404040;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: inherit;
+  font-family: inherit;
+  margin: 4px 2px;
+}
+
+
+input[type="text"] {
+    font-size: 90%;
+    font-family: inherit;
+    margin: 5px 0;
+    padding: 2px 5px;
+    border: 2px solid #404040;
+}
+
+.smallcaps {
+  font-variant:small-caps;
+}
